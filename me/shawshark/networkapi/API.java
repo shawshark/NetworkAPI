@@ -67,4 +67,9 @@ public class API {
 	public static String colourMessage(String message) {
 		return ChatColor.translateAlternateColorCodes('&', message);
 	}
+	
+	public static String VOTE_LISTENING_CHANNEL_MESSAGE = "NetworkAPI.vote";
+	public static void doVote(String username) {
+		LilySend.messageRequest(VOTE_LISTENING_CHANNEL_MESSAGE, username);
+	}
 }
